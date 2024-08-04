@@ -1,0 +1,25 @@
+{
+    "schemaVersion": 1,
+    "id": "essentialsx",
+    "version": "1.0.0",
+    "name": "EssentialsX",
+    "description": "Auto-generated Fabric mod for EssentialsX",
+    "authors": ["AI Generator"],
+    "contact": {
+        "sources": "https://github.com/user/repo"
+    },
+    "license": "MIT",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "essentialsx.Main"
+        ]
+    },
+    "mixins": [
+        "essentialsx.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.7.2",
+        "fabric": "*"
+    }
+}

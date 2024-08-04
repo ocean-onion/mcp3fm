@@ -1,0 +1,12 @@
+language = "python3"
+run = "flask run --host=0.0.0.0 --port=5001"
+entrypoint = "run.py"
+modules = ["python-3.10"]
+
+[[ports]]
+localPort = 5001
+externalPort = 5001
+
+[[ports]]
+localPort = 34559
+externalPort = 80

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Rate Plugin: {{ plugin.name }}</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.rating.label }}
+        {{ form.rating(size=32) }}
+    </div>
+    <div>
+        {{ form.review.label }}
+        {{ form.review(rows=4) }}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+<a href="{{ url_for('main.home') }}">Home</a>
+{% endblock %}

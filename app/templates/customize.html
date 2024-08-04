@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Customize Plugin: {{ plugin.name }}</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.option1.label }}
+        {{ form.option1() }}
+    </div>
+    <div>
+        {{ form.option2.label }}
+        {{ form.option2() }}
+    </div>
+    <div>
+        {{ form.option3.label }}
+        {{ form.option3() }}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+<a href="{{ url_for('main.home') }}">Home</a>
+{% endblock %}
