@@ -1,9 +1,13 @@
-from flask import Blueprint, render_template
-from flask_login import login_required, current_user
+import os
+from flask import Flask
+from config import Config
+from app import create_app, db
 
-main = Blueprint('main', __name__)
+app = create_app(Config)
 
-@main.route('/')
-@login_required
-def home():
-    return render_template('home.html', title='Home')
+@app.shell_context_processor
+def make_shell_context():
+    return {'db': db}
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
