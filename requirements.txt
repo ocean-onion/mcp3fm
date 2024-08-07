@@ -14,3 +14,5 @@ ipython==7.24.1
 sphinx==4.0.2
 html5lib==1.1
 pytest==6.2.4
+tensorflow==2.6.0
+numpy==1.21.0
